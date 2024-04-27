@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/images/favicon.jpeg" type="image/x-icon">
+    <title>Housing</title>
+</head>
+<body>
+
+<nav class="navbar fixed-top navbar-expand-xl navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/images/logo.webp" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="container-input">
+                            <input type="text" placeholder="Search property" name="text" class="input">
+                            <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="f2(this)">Buy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="f1(this)">Rent</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="f3(this)">Sell</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/signup.html" class="btn btn-contact">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+<!-- Header Content -->
+<section class="banner" id="bannerhead">
+    <div class="container">
+        <div class="row">
+            <!-- Content Column -->
+            <div class="col-md-6">
+                <section class="home" id="home">
+                    <form action="">
+                        <h3>Find Your Perfect Home</h3>
+                        <div class="buttons-container">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                  <a class="nav-link active" data-bs-toggle="tab" href="#rent">Rent</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" data-bs-toggle="tab" href="#buy">Buy</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" data-bs-toggle="tab" href="#sell">Sell</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane container active" id="rent">
+                                <div class="inputBox">
+                                    <input type="search" name="neighborhood" placeholder="Enter Neighborhood">
+                                    <input type="search" name="city" placeholder="Enter City">
+                                    <input type="number" name="minimum_price" placeholder="Minimum Price">
+                                    <input type="number" name="maximum_price" placeholder="Maximum Price">
+                                    <select name="property_type">
+                                        <option value="" disabled selected>Property Type</option>
+                                        <option value="Apartment">Apartment</option>
+                                        <option value="House">House</option>
+                                        <option value="Duplex">Duplex</option>
+                                    </select>
+                                    <input type="number" name="lease_duration" placeholder="Lease Duration (Months)">
+                                    <input type="number" name="security_deposit" placeholder="Security Deposit">
+                                    <input type="number" name="rent_amount" placeholder="Rent Amount">
+                                    <input type="submit" value="Search for Properties" class="btn btn-primary" >
+                                </div>
+                                
+                            </div>
+                            <div class="tab-pane container" id="buy">
+                                <div class="inputBox">
+                                    <input type="search" name="" placeholder="neighborhood" id="">
+                                    <input type="search" name="" placeholder="city" id="">
+                                    <select name="" id="">
+                                        <option value="" disabled hidden selected>minimum price</option>
+                                        <option value="5Lac">5Lac</option>
+                                        <option value="10Lac">10Lac</option>
+                                        <option value="15Lac">15Lac</option>
+                                        <option value="20Lac">20Lac</option>
+                                        <option value="25Lac">25Lac</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="" disabled hidden selected>maximum price</option>
+                                        <option value="50Lac">50Lac</option>
+                                        <option value="60Lac">60Lac</option>
+                                        <option value="70Lac">70Lac</option>
+                                        <option value="80Lac">80Lac</option>
+                                        <option value="2Cr">2Cr</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="" disabled hidden selected>property status</option>
+                                        <option value="Ready To Move">Ready To Move</option>
+                                        <option value="under construction">under construction</option>
+                                        <option value="furnished">furnished</option>
+                                        <option value="semi-furnished">semi-furnished</option>
+                                        <option value="unfurnished">unfurnished</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="" disabled hidden selected>property type</option>
+                                        <option value="flat">flat</option>
+                                        <option value="house">house</option>
+                                        <option value="shop">shop</option>
+                                        <option value="warehouse">warehouse</option>
+                                        <option value="land">land</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="" disabled hidden selected>BHK</option>
+                                        <option value="1 BHK">1 BHK</option>
+                                        <option value="2 BHK">2 BHK</option>
+                                        <option value="3 BHK">3 BHK</option>
+                                        <option value="4 BHK">4 BHK</option>
+                                        <option value="5 BHK">5 BHK</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="" disabled hidden selected>aminities</option>
+                                        <option value="parking space">parking space</option>
+                                        <option value="swimming pool">swimming pool</option>
+                                        <option value="playground">playground</option>
+                                        <option value="security">security</option>
+                                        <option value="all">all</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="" disabled hidden selected>bedrooms</option>
+                                        <option value="1 bedroom">1 bedroom</option>
+                                        <option value="2 bedroom">2 bedroom</option>
+                                        <option value="3 bedroom">3 bedroom</option>
+                                        <option value="4 bedroom">4 bedroom</option>
+                                        <option value="5 bedroom">5 bedroom</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="" disabled hidden selected>bathrooms</option>
+                                        <option value="1 bathroom">1 bathroom</option>
+                                        <option value="2 bathroom">2 bathroom</option>
+                                        <option value="3 bathroom">3 bedroom</option>
+                                        <option value="4 bathroom">4 bathroom</option>
+                                        <option value="5 bathroom">5 bathroom</option>
+                                    </select>
+                                    <input type="submit" value="search property" class="btn btn-primary">
+                                </div>
+                            </div>
+                            <div class="tab-pane container" id="sell">
+                                <div class="inputBox">
+                                    <input type="text" name="property_title" placeholder="Property Title">
+                                    <input type="search" name="neighborhood" placeholder="Enter Neighborhood">
+                                    <input type="search" name="city" placeholder="Enter City">
+                                    <input type="number" name="minimum_price" placeholder="Minimum Price">
+                                    <input type="number" name="maximum_price" placeholder="Maximum Price">
+                                    <select name="property_condition">
+                                        <option value="" disabled selected>Property Condition</option>
+                                        <option value="New">New</option>
+                                        <option value="Renovated">Renovated</option>
+                                        <option value="As-is">Semi-Furnished</option>
+                                    </select>
+                                    <input type="file" name="property_image" accept="image/*">
+                                    <textarea name="description" placeholder="Property Description"></textarea>
+                                    <!-- Additional elements specific to selling -->
+                                    <input type="submit" value="List Property" class="btn btn-primary">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </form>
+                </section>
+            </div>
+            <!-- Carousel Column -->
+            <div class="col-md-6">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/images/banner1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/banner2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/images/banner3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="popular-destinations-section" id="popularDestinationsSection">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="choose-destination">CHOOSE YOUR PROPERTY</p>
+                <h2 class="section-title">FEATURED PROPERTIES</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container" id="Featured">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- First Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-1.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>3 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹25,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Modern Flates</h3>
+                        <p>Bodakdev, Ahmedabad, <br> India - 380058</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Modern Flates&marketedBy=Rameshwar Group&address=Bodakdev, Ahmedabad,India - 380058&rentSale=For Rent&price=₹25,000/mo&bhk=3BHK FLAT&month=April-2024&size=3500 sqft&agent=Agent Garv: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of First Card -->
+        <!-- Second Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-2.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3>₹65 Lac Onwards</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Orchid Heights</h3>
+                        <p>South Bopal, Ahmedabad, <br> India - 3800104</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 2500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 2 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=ORCHID HEIGHTS&marketedBy=Orchid Groups&address=South Bopal, Ahmedabad, India - 3800104&rentSale=For SALE&price=₹65 Lac Onwards&bhk=2BHK FLAT&month=April-2024&size=2500 sqft&agent=Agent Jeet: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Second Card -->
+         <!-- Third Card -->
+         <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-3.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹2.5 Cr Onwards</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Sky Avenue</h3>
+                        <p>Opp Vedant School,Bopal,<br> Ahmedabad - 380058</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 4 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 3 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=SKY AVENUE&marketedBy=SKY ASSOCIATES&address=Opp Vedant School,Bopal, Ahmedabad, India - 380058&rentSale=For SALE&price=₹2.5 Cr Onwards&bhk=4BHK FLAT&month=MAY-2024&size=3500 sqft&agent=Agent Jeet: 6355664142" class="btn btn-secondary">View Details</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Third Card -->
+         <!-- Fourth Card -->
+         <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-4.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹30,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Ayush Flates</h3>
+                        <p>Vatva west, Ahmedabad, <br>India - 380058</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=AYUSH FLATES&marketedBy=GANESH ASSOCIATES&address=Vatva west, Ahmedabad, India - 380058&rentSale=FOR RENT&price=₹30,000/mo&bhk=3BHK FLAT&month=MARCH-2024&size=3500 sqft&agent=Agent YASH: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Fourth Card -->
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- First Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-5.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>3 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹65 Lac Onwards</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Gokuldham Society</h3>
+                        <p>Maninagar, Ahmedabad, india - 380008</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Gokuldham Society&marketedBy=ORCHID BUILDERS&address=Maninagar, Ahmedabad, India - 380008&rentSale=FOR SELL&price=₹65 Lac Onwards&bhk=3BHK FLAT&month=MARCH-2024&size=3500 sqft&agent=Agent DEEP: 6355664142" class="btn btn-secondary">View Details</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of First Card -->
+        <!-- Second Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-6.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹40,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Yash Flates</h3>
+                        <p>Kankaria, Ahmedabad, India - 380008</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 4 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 3 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Yash Flates&marketedBy=SHIVALIK ASSOCIATES&address=Kankaria, Ahmedabad, India - 380008&rentSale=FOR RENT&price=₹40,000/mo&bhk=4BHK FLAT&month=MARCH-2024&size=3500 sqft&agent=Agent YASH: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Second Card -->
+         <!-- Third Card -->
+         <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-7.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹80 Lac Onwards</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Avista Heights</h3>
+                        <p>Jodhpur, Ahmedabad, India - 380004</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Avista Heights&marketedBy=SHIVALIK ASSOCIATES&address=Jodhpur, Ahmedabad, India - 380004&rentSale=FOR SALE&price=₹80 LAC ONWARDS&bhk=3BHK FLAT&month=MARCH-2024&size=2500 sqft&agent=Agent YASH: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Third Card -->
+         <!-- Fourth Card -->
+         <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-8.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>5 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹35,000/mo</h3><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Malabar Retreat</h3>
+                        <p>Bopal, Ahmedabad, India - 380058</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Malabar Retreat&marketedBy=DHANANJAY ASSOCIATES&address=Bopal, Ahmedabad, India - 380058&rentSale=FOR RENT&price=₹35,000/mo&bhk=3BHK FLAT&month=MARCH-2024&size=3500 sqft&agent=Agent Smit: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Fourth Card -->
+    </div>
+</div>
+
+<section class="popular-Schemes" id="popularschemes">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="choose-destination">CHOOSE YOUR PROPERTY</p>
+                <h2 class="section-title">FEATURED SCHEMES</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container" id="schemecards">
+    <div id="popular-carousel"  class="carousel slide" data-bs-interval="false"> 
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="Scheme-card">
+                            <img src="/images/scheme-1.jpg" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- Left column for logo -->
+                                    <div class="col-md-3">
+                                        <img src="/images/logoscheme-1.jpg" alt="Project Logo">
+                                    </div>
+                                    <!-- Center column for project details -->
+                                    <div class="col-md-6">
+                                        <h5 class="card-title">Shilp Paradise</h5>
+                                        <p class="card-text">
+                                            by Shilp Group <br>
+                                            Bodakdev Ahmedabad
+                                        </p>
+                                    </div>
+                                    <!-- Right column for price and flat details -->
+                                    <div class="col-md-3">
+                                        <p class="price">4BHK Flats</p>
+                                        <p class="details"><b>₹2.25 Cr</b><br>onwards</p>
+                                    </div>
+                                </div>
+                                <a href="/subpage.html?cardTitle=Shilp Paradise&marketedBy=Shilp Group&address=Bodakdev, Ahmedabad, India - 380058&rentSale=FOR SALE&price=₹2.5 CR ONWARDS&bhk=4BHK FLAT&month=MARCH-2024&size=3500 sqft&agent=Agent Smit: 6355664142" class="btn btn-danger">View Details</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="Scheme-card">
+                            <img src="/images/scheme-2.avif" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- Left column for logo -->
+                                    <div class="col-md-3">
+                                        <img src="/images/logoscheme-2.jpg" alt="Project Logo">
+                                    </div>
+                                    <!-- Center column for project details -->
+                                    <div class="col-md-6">
+                                        <h5 class="card-title">Malabar Retreat</h5>
+                                        <p class="card-text">
+                                            by Ganesh Housing Corporation LTD <br>
+                                            Satellite Ahmedabad
+                                        </p>
+                                    </div>
+                                    <!-- Right column for price and flat details -->
+                                    <div class="col-md-3">
+                                        <p class="price">4BHK Flats</p>
+                                        <p class="details"><b>₹2.53 Cr</b><br>onwards</p>
+                                    </div>
+                                </div>
+                                <a href="/subpage.html?cardTitle=Malabar Retreat&marketedBy=GANESH HOUSINGS&address=Satellite, Ahmedabad, India - 380058&rentSale=FOR RENT&price=₹35,000/mo&bhk=3BHK FLAT&month=MARCH-2024&size=3500 sqft&agent=Agent Smit: 6355664142" class="btn btn-danger">View Details</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="Scheme-card">
+                            <img src="/images/scheme-3.avif" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- Left column for logo -->
+                                    <div class="col-md-3">
+                                        <img src="/images/logoscheme-3.jpg" alt="Project Logo">
+                                    </div>
+                                    <!-- Center column for project details -->
+                                    <div class="col-md-6">
+                                        <h5 class="card-title">Samanvay Heights</h5>
+                                        <p class="card-text">
+                                            by Ashapura Buildcon <br>
+                                            South Bopal Ahmedabad
+                                        </p>
+                                    </div>
+                                    <!-- Right column for price and flat details -->
+                                    <div class="col-md-3">
+                                        <p class="price">3BHK Flats</p>
+                                        <p class="details"><b>₹65 Lac</b><br>onwards</p>
+                                    </div>
+                                </div>
+                                <a href="/subpage.html?cardTitle=Samanvay Heights&marketedBy=ASHAPURA BUILDCON&address=South Bopal, Ahmedabad, India - 380058&rentSale=FOR SALE&price=₹65 LAC&bhk=3BHK FLAT&month=APRIL-2024&size=3000 sqft&agent=Agent Dhruv: 6355664142" class="btn btn-danger">View Details</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more carousel items as needed -->
+            <div class="carousel-item">
+                <div class="row">
+                    <!-- Card 4 -->
+                    <div class="col-md-4">
+                        <div class="Scheme-card">
+                            <img src="/images/scheme-4.jpeg" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- Left column for logo -->
+                                    <div class="col-md-3">
+                                        <img src="/images/logoscheme-2.jpg" alt="Project Logo">
+                                    </div>
+                                    <!-- Center column for project details -->
+                                    <div class="col-md-6">
+                                        <h5 class="card-title">Orchid Heights</h5>
+                                        <p class="card-text">
+                                            by Ganesh Housing Corporation LTD <br>
+                                            Satellite Ahmedabad
+                                        </p>
+                                    </div>
+                                    <!-- Right column for price and flat details -->
+                                    <div class="col-md-3">
+                                        <p class="price">4BHK Flats</p>
+                                        <p class="details"><b>₹2.25 Cr</b><br>onwards</p>
+                                    </div>
+                                </div>
+                                <a href="/subpage.html?cardTitle=Orchid Heights&marketedBy=GANESH HOUSINGS&address=Satellite, Ahmedabad, India - 380058&rentSale=FOR SALE&price=₹2.25 CR&bhk=4BHK FLAT&month=APRIL-2024&size=2500 sqft&agent=Agent HET: 6355664142" class="btn btn-danger">View Details</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="Scheme-card">
+                            <img src="/images/scheme-5.avif" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- Left column for logo -->
+                                    <div class="col-md-3">
+                                        <img src="/images/logoscheme-4.jpg" alt="Project Logo">
+                                    </div>
+                                    <!-- Center column for project details -->
+                                    <div class="col-md-6">
+                                        <h5 class="card-title">Shree Vishnudhara</h5>
+                                        <p class="card-text">
+                                            by Vishnudhara LLP <br>
+                                            Satellite Ahmedabad
+                                        </p>
+                                    </div>
+                                    <!-- Right column for price and flat details -->
+                                    <div class="col-md-3">
+                                        <p class="price">4BHK Flats</p>
+                                        <p class="details"><b>₹1.25 Cr</b><br>onwards</p>
+                                    </div>
+                                </div>
+                                <a href="/subpage.html?cardTitle=Shree Vishnudhara&marketedBy=VISHNUDHARA LLP&address=Satellite, Ahmedabad, India - 380058&rentSale=FOR SALE&price=₹1.25 CR&bhk=4BHK FLAT&month=MARCH-2024&size=4000 sqft&agent=Agent Smit: 6355664142" class="btn btn-danger">View Details</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="Scheme-card">
+                            <img src="/images/scheme-6.avif" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- Left column for logo -->
+                                    <div class="col-md-3">
+                                        <img src="/images/logoscheme-1.jpg" alt="Project Logo">
+                                    </div>
+                                    <!-- Center column for project details -->
+                                    <div class="col-md-6">
+                                        <h5 class="card-title">Aarambh Paradise</h5>
+                                        <p class="card-text">
+                                            by Shilp Group <br>
+                                            Bodakdev Ahmedabad
+                                        </p>
+                                    </div>
+                                    <!-- Right column for price and flat details -->
+                                    <div class="col-md-3">
+                                        <p class="price">4BHK Flats</p>
+                                        <p class="details"><b>₹1.75 Cr</b><br>onwards</p>
+                                    </div>
+                                </div>
+                                <a href="/subpage.html?cardTitle=Aarambh Paradise&marketedBy=SHILP GROUP&address=Bodakdev, Ahmedabad, India - 380058&rentSale=FOR SALE&price=₹1.75 CR&bhk=4BHK FLAT&month=APRIL-2024&size=3500 sqft&agent=Agent Smit: 6355664142" class="btn btn-danger">View Details</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Previous and Next Buttons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#popular-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#popular-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+<section class="trending-projects" id="trend">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="choose-destination">Most sought-after projects in Ahmedabad</p>
+                <h2 class="section-title">TRENDING PROJECTS</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container" id="trendcards">
+    <div id="trending-carousel"  class="carousel slide" data-bs-interval="false"> 
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg g-4">
+
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <div class="card-img-container">
+                                <img src="/images/trending-1.avif" class="card-img-top" alt="Project Image">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Saral Heights</h5>
+                                <p class="card-text" style="font-size: 16px; color: #6c757d;  margin-top: 0;">by Saral Buildcon</p>
+                                <p class="card-text" style=" font-family: 'Montserrat', sans-serif;">2, 3 BHK Apartments<br>Vastral, East Ahmedabad....</p>
+                                <p class="card-text" style="font-weight: bold; font-size: 16px;">₹48.01 L - ₹62.5 L 
+                                    <br>
+                                    <a href="/signup.html" class="btn btn-success">Contact</a><p>                                       
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                                <div class="card-img-container">
+                                    <img src="/images/trending-2.avif" class="card-img-top" alt="Project Image">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Dharohar Flats</h5>
+                                    <p class="card-text" style="font-size: 16px; color: #6c757d;  margin-top: 0;">by Sheetal Infrastructure</p>
+                                    <p class="card-text" style=" font-family: 'Montserrat', sans-serif;">3, 4 BHK Apartments<br>Vaishno Devi,Ahmedabad.</p>
+                                    <p class="card-text" style="font-weight: bold; font-size: 16px;">₹1.29 Cr - ₹1.7 Cr <br> <a href="signup.html" class="btn btn-success">Contact</a></p>                                       
+                                </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                                 <div class="card-img-container">
+                                    <img src="/images/trending-3.avif" class="card-img-top" alt="Project Image">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Tulsi Heights</h5>
+                                    <p class="card-text" style="font-size: 16px; color: #6c757d;  margin-top: 0;">by Ganesh Housings</p>
+                                    <p class="card-text" style=" font-family: 'Montserrat', sans-serif;">2 BHK Apartments<br>Vatva,Ahmedabad.</p>
+                                    <p class="card-text" style="font-weight: bold; font-size: 16px;">₹30 L - ₹35 L <br><a href="signup.html" class="btn btn-success">Contact</a></p>                                       
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg g-4">
+
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <div class="card-img-container">
+                                <img src="/images/trending-4.avif" class="card-img-top" alt="Project Image">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Yash Flats</h5>
+                                <p class="card-text" style="font-size: 16px; color: #6c757d;  margin-top: 0;">by Shilp group</p>
+                                <p class="card-text" style=" font-family: 'Montserrat', sans-serif;">3 BHK Apartments<br>Bopal,Ahmedabad....</p>
+                                <p class="card-text" style="font-weight: bold; font-size: 16px;">₹62.5 L - ₹75.01 L <br>  <a href="signup.html" class="btn btn-success">Contact</a></p>                                       
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <div class="card-img-container">
+                                <img src="/images/trending-5.avif" class="card-img-top" alt="Project Image">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Godrej Garden City</h5>
+                                <p class="card-text" style="font-size: 16px; color: #6c757d;  margin-top: 0;">by Godrej</p>
+                                <p class="card-text" style=" font-family: 'Montserrat', sans-serif;">3, 4 BHK Apartments<br>Vaishno Devi,Ahmedabad.</p>
+                                <p class="card-text" style="font-weight: bold; font-size: 16px;">₹1.29 Cr - ₹1.7 Cr <br><a href="signup.html" class="btn btn-success">Contact</a></p>                                       
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <div class="card-img-container">
+                                <img src="/images/trending-6.avif" class="card-img-top" alt="Project Image">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">DB Skyline</h5>
+                                <p class="card-text" style="font-size: 16px; color: #6c757d;  margin-top: 0;">by DB Construction</p>
+                                <p class="card-text" style=" font-family: 'Montserrat', sans-serif;">3 BHK Apartments<br>Hathijan,Ahmedabad...</p>
+                                <p class="card-text" style="font-weight: bold; font-size: 16px;">₹62.5 L - ₹75.01 L <br> <a href="signup.html" class="btn btn-success">Contact</a></p>                                       
+                            </div>
+                        </div>
+                    </div>
+                     
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg g-4">
+
+                    <!-- Card 7 -->
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                                <div class="card-img-container">
+                                    <img src="/images/trending-7.avif" class="card-img-top" alt="Project Image">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Lycka Life</h5>
+                                    <p class="card-text" style="font-size: 16px; color: #6c757d;  margin-top: 0;">by Lyca Properties</p>
+                                    <p class="card-text" style=" font-family: 'Montserrat', sans-serif;">3 BHK Apartments<br>Science City,Ahmedabad....</p>
+                                    <p class="card-text" style="font-weight: bold; font-size: 16px;">₹85.01 L <br><a href="signup.html" class="btn btn-success">Contact</a></p>                                       
+                                </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- Card 8-->
+                    <div class="col-md-4">
+                            <div class="card project-card">
+                                <div class="card-img-container">
+                                    <img src="/images/trending-8.avif" class="card-img-top" alt="Project Image">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Avista Heights</h5>
+                                    <p class="card-text" style="font-size: 16px; color: #6c757d;  margin-top: 0;">by Shilp Group</p>
+                                    <p class="card-text" style=" font-family: 'Montserrat', sans-serif;">3, 4 BHK Apartments<br>Satellite,Ahmedabad.</p>
+                                    <p class="card-text" style="font-weight: bold; font-size: 16px;">₹1.29 Cr - ₹1.7 Cr <br><a href="signup.html" class="btn btn-success">Contact</a></p>                                       
+                                </div>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <div class="card-img-container">
+                                <img src="/images/trending-9.avif" class="card-img-top" alt="Project Image">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Vinayak Park</h5>
+                                <p class="card-text" style="font-size: 16px; color: #6c757d;  margin-top: 0;">by Ganesh Housings</p>
+                                <p class="card-text" style=" font-family: 'Montserrat', sans-serif;">2 BHK Apartments<br>Vatva,Ahmedabad.</p>
+                                <p class="card-text" style="font-weight: bold; font-size: 16px;">₹30 L - ₹35 L <br> <a href="signup.html" class="btn btn-success">Contact</a></p>                                       
+                            </div>        
+                        </div>
+                    </div>
+                     
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg g-4">
+
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <div class="card-img-container">
+                                <img src="/images/trending-10.avif" class="card-img-top" alt="Project Image">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Aarohi Shivalay</h5>
+                                <p class="card-text" style="font-size: 16px; color: #6c757d;  margin-top: 0;">by Shivalay group</p>
+                                <p class="card-text" style=" font-family: 'Montserrat', sans-serif;">3,4 BHK Apartments<br>Hathijan,Ahmedabad....</p>
+                                <p class="card-text" style="font-weight: bold; font-size: 16px;">₹62.5 L - ₹85.01 L <br> <a href="signup.html" class="btn btn-success">Contact</a></p>                                       
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                                <div class="card-img-container">
+                                    <img src="/images/trending-11.avif" class="card-img-top" alt="Project Image">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Lotus Heights</h5>
+                                    <p class="card-text" style="font-size: 16px; color: #6c757d;  margin-top: 0;">by Lotus Group</p>
+                                    <p class="card-text" style=" font-family: 'Montserrat', sans-serif;">3, 4 BHK Apartments<br>Vaishno Devi,Ahmedabad.</p>
+                                    <p class="card-text" style="font-weight: bold; font-size: 16px;">₹1.29 Cr - ₹1.8 Cr <br> <a href="signup.html" class="btn btn-success">Contact</a></p>                                       
+                                </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card project-card">
+                            <div class="card-img-container">
+                                <img src="/images/trending-12.avif" class="card-img-top" alt="Project Image">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Swastik Saffron</h5>
+                                <p class="card-text" style="font-size: 16px; color: #6c757d;  margin-top: 0;">by Swastik Reality</p>
+                                <p class="card-text" style=" font-family: 'Montserrat', sans-serif;">3 BHK Apartments<br>Vatva,Ahmedabad...</p>
+                                <p class="card-text" style="font-weight: bold; font-size: 16px;">₹62.5 L - ₹75.01 L  <br><a href="signup.html" class="btn btn-success">Contact</a></p>                                       
+                            </div>
+                        </div>
+                    </div>
+                     
+            
+                </div>
+            </div>
+        </div>
+        <!-- Previous and Next Buttons -->
+        <button class="carousel-control-prev custom-prev" type="button" data-bs-target="#trending-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next custom-next" type="button" data-bs-target="#trending-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+<!--Rent Section To Be Displayed When clicked-->
+<section class="popular-destinations-section" id="Rent" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="choose-destination">CHOOSE YOUR PROPERTY</p>
+                <h2 class="section-title">RENT PROPERTIES</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container" id="Rentcards" style="display: none;">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- First Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="/rent/card-1.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>3 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹30,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Ayush Avenue</h3>
+                        <p>Satellite, Ahmedabad, <br> India - 380050</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Ayush Avenue&marketedBy=GANESH ASSOCIATES&address=Satellite, Ahmedabad, India - 380050&rentSale=For Rent&price=₹30,000/mo&bhk=3BHK FLAT&month=April-2024&size=2500 sqft&agent=Agent Shlok: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of First Card -->
+        <!-- Second Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="/rent/card-2.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>4 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹75,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Shilp Paradise</h3>
+                        <p>Sindhubhavan, Ahmedabad,<br> India - 380049</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 4000 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 4 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 3 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Shilp Paradise&marketedBy=SHILP BUILDCON&address=Sindhubhavan, Ahmedabad, India - 380049&rentSale=For Rent&price=₹75,000/mo&bhk=4BHK FLAT&month=April-2024&size=3500 sqft&agent=Agent Tirth: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Second Card -->
+         <!-- Third Card -->
+         <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="/rent/card-3.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>5 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹50,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Ananya Flats</h3>
+                        <p>Satellite, Ahmedabad, <br> India - 380054</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Ananya Flats&marketedBy=GANESH HOUSINGS&address=Satellite, Ahmedabad, India - 380054&rentSale=For Rent&price=₹50,000/mo&bhk=3BHK FLAT&month=April-2024&size=2500 sqft&agent=Agent AESHA: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Third Card -->
+         <!-- Fourth Card -->
+         <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="/rent/card-4.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹45,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Avista Square</h3>
+                        <p>Maninagar East, Ahmedabad,<br> India - 380008</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Avista Square&marketedBy=RUBICON ASSOCIATES&address=Maninagar East, Ahmedabad, India - 380008&rentSale=For Rent&price=₹45,000/mo&bhk=3BHK FLAT&month=February-2024&size=2500 sqft&agent=Agent JATIN: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Fourth Card -->
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- First Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="/rent/card-5.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>7 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹55,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Samanvay Heights</h3>
+                        <p>Bodakdev, Ahmedabad,<br> India - 380058</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 4000 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 4 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 4 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Samanvay Heights&marketedBy=Rameshwar Group&address=Bodakdev, Ahmedabad, India - 380058&rentSale=For Rent&price=₹55,000/mo&bhk=4BHK FLAT&month=April-2024&size=3500 sqft&agent=Agent Garv: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of First Card -->
+        <!-- Second Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="/rent/card-6.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹75,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Godrej Garden City</h3>
+                        <p>Bopal, Ahmedabad, <br> India - 380054</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 4500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 4 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 4 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Godrej Garden City&marketedBy=BY GODREJ&address=Bopal, Ahmedabad, India - 380054&rentSale=For Rent&price=₹75,000/mo&bhk=4BHK FLAT&month=April-2024&size=3500 sqft&agent=Agent RAJ: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Second Card -->
+         <!-- Third Card -->
+         <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="/rent/card-7.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>4 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹50,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Orchid Heights</h3>
+                        <p>Jodhpur, Ahmedabad, <br> India - 380054</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Orchid Heights&marketedBy=GANESH ASSOCIATES&address=Jodhpur, Ahmedabad, India - 380054&rentSale=For Rent&price=₹50,000/mo&bhk=3BHK FLAT&month=April-2024&size=2500 sqft&agent=Agent JEET: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Third Card -->
+         <!-- Fourth Card -->
+         <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="/rent/card-8.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>2 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹55,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Swastik Saffron</h3>
+                        <p>Maninagar , Ahmedabad, <br> India - 380008</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Swastik Saffron&marketedBy=SHIVALIK CENTER&address=Maninagar , Ahmedabad, India - 380008&rentSale=For Rent&price=₹55,000/mo&bhk=3BHK FLAT&month=March-2024&size=2500 sqft&agent=Agent JEET: 6355664142" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Fourth Card -->
+    </div>
+</div>
+
+
+<!--BUY Section To Be Displayed When clicked-->
+<section class="popular-destinations-section" id="Buy" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="choose-destination">CHOOSE YOUR PROPERTY</p>
+                <h2 class="section-title">PROPERTIES TO BE SOLD</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container" id="Buycards" style="display: none;">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- First Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-1.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>3 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹25,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Modern Flates</h3>
+                        <p>Bodakdev, Ahmedabad, <br> India - 380058</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Modern Flates&marketedBy=Rameshwar Group&address=Bodakdev, Ahmedabad,India - 380058&rentSale=For Rent&price=₹25,000/mo&bhk=3BHK FLAT&month=April-2024&size=3500 sqft&agent=Agent Garv: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of First Card -->
+        <!-- Second Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-2.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3>₹65 Lac Onwards</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Orchid Heights</h3>
+                        <p>South Bopal, Ahmedabad, <br> India - 3800104</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 2500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 2 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=ORCHID HEIGHTS&marketedBy=Orchid Groups&address=South Bopal, Ahmedabad, India - 3800104&rentSale=For SALE&price=₹65 Lac Onwards&bhk=2BHK FLAT&month=April-2024&size=2500 sqft&agent=Agent Jeet: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Second Card -->
+         <!-- Third Card -->
+         <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-3.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹2.5 Cr Onwards</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Sky Avenue</h3>
+                        <p>Opp Vedant School,Bopal,<br> Ahmedabad - 380058</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 4 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 3 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=SKY AVENUE&marketedBy=SKY ASSOCIATES&address=Opp Vedant School,Bopal, Ahmedabad, India - 380058&rentSale=For SALE&price=₹2.5 Cr Onwards&bhk=4BHK FLAT&month=MAY-2024&size=3500 sqft&agent=Agent Jeet: 6355664142" class="btn btn-secondary">View Details</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Third Card -->
+         <!-- Fourth Card -->
+         <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-4.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹30,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Ayush Flates</h3>
+                        <p>Vatva west, Ahmedabad, <br>India - 380058</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=AYUSH FLATES&marketedBy=GANESH ASSOCIATES&address=Vatva west, Ahmedabad, India - 380058&rentSale=FOR RENT&price=₹30,000/mo&bhk=3BHK FLAT&month=MARCH-2024&size=3500 sqft&agent=Agent YASH: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Fourth Card -->
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- First Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-5.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>3 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹65 Lac Onwards</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Gokuldham Society</h3>
+                        <p>Maninagar, Ahmedabad, india - 380008</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Gokuldham Society&marketedBy=ORCHID BUILDERS&address=Maninagar, Ahmedabad, India - 380008&rentSale=FOR SELL&price=₹65 Lac Onwards&bhk=3BHK FLAT&month=MARCH-2024&size=3500 sqft&agent=Agent DEEP: 6355664142" class="btn btn-secondary">View Details</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of First Card -->
+        <!-- Second Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-6.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹40,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Yash Flates</h3>
+                        <p>Kankaria, Ahmedabad, India - 380008</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 4 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 3 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Yash Flates&marketedBy=SHIVALIK ASSOCIATES&address=Kankaria, Ahmedabad, India - 380008&rentSale=FOR RENT&price=₹40,000/mo&bhk=4BHK FLAT&month=MARCH-2024&size=3500 sqft&agent=Agent YASH: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Second Card -->
+         <!-- Third Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-7.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹80 Lac Onwards</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Avista Heights</h3>
+                        <p>Jodhpur, Ahmedabad, India - 380004</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Avista Heights&marketedBy=SHIVALIK ASSOCIATES&address=Jodhpur, Ahmedabad, India - 380004&rentSale=FOR SALE&price=₹80 LAC ONWARDS&bhk=3BHK FLAT&month=MARCH-2024&size=2500 sqft&agent=Agent YASH: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Third Card -->
+         <!-- Fourth Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-8.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>5 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹35,000/mo</h3><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Malabar Retreat</h3>
+                        <p>Bopal, Ahmedabad, India - 380058</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Malabar Retreat&marketedBy=DHANANJAY ASSOCIATES&address=Bopal, Ahmedabad, India - 380058&rentSale=FOR RENT&price=₹35,000/mo&bhk=3BHK FLAT&month=MARCH-2024&size=3500 sqft&agent=Agent Smit: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Fourth Card -->
+    </div>
+</div>
+
+
+<!--SELL Section To Be Displayed When clicked-->
+<section class="popular-destinations-section" id="Sellhead" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="choose-destination">ADD YOUR PROPERTY</p>
+                <h2 class="section-title">FILL UP BELOW FORM</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container sell-form-container" id="sellform" style="display: none;">
+    <div class="inputBox">
+        <input type="text" name="property_title" placeholder="Property Title">
+        <input type="search" name="neighborhood" placeholder="Enter Neighborhood">
+        <input type="search" name="city" placeholder="Enter City">
+        <input type="number" name="minimum_price" placeholder="Minimum Price">
+        <input type="number" name="maximum_price" placeholder="Maximum Price">
+        <select name="property_condition">
+            <option value="" disabled selected>Property Condition</option>
+            <option value="New">New</option>
+            <option value="Renovated">Renovated</option>
+            <option value="As-is">Semi-Furnished</option>
+        </select>
+        <input type="file" name="property_image" accept="image/*">
+        <textarea name="description" placeholder="Property Description"></textarea>
+        <!-- Additional elements specific to selling -->
+        <button type="submit" class="btn btn-primary" onclick="f3(this)">List Property</button>
+    </div>
+</div>
+
+<section class="popular-destinations-section" id="Sell" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="choose-destination">CHOOSE YOUR PROPERTY</p>
+                <h2 class="section-title">LATEST PROPERIES ADDED </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container" id="Sellcards" style="display: none;">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- First Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-1.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>3 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹25,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Modern Flates</h3>
+                        <p>Bodakdev, Ahmedabad, <br> India - 380058</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Modern Flates&marketedBy=Rameshwar Group&address=Bodakdev, Ahmedabad,India - 380058&rentSale=For Rent&price=₹25,000/mo&bhk=3BHK FLAT&month=April-2024&size=3500 sqft&agent=Agent Garv: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of First Card -->
+        <!-- Second Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-2.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3>₹65 Lac Onwards</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Orchid Heights</h3>
+                        <p>South Bopal, Ahmedabad, <br> India - 3800104</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 2500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 2 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=ORCHID HEIGHTS&marketedBy=Orchid Groups&address=South Bopal, Ahmedabad, India - 3800104&rentSale=For SALE&price=₹65 Lac Onwards&bhk=2BHK FLAT&month=April-2024&size=2500 sqft&agent=Agent Jeet: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Second Card -->
+         <!-- Third Card -->
+         <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-3.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹2.5 Cr Onwards</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Sky Avenue</h3>
+                        <p>Opp Vedant School,Bopal,<br> Ahmedabad - 380058</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 4 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 3 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=SKY AVENUE&marketedBy=SKY ASSOCIATES&address=Opp Vedant School,Bopal, Ahmedabad, India - 380058&rentSale=For SALE&price=₹2.5 Cr Onwards&bhk=4BHK FLAT&month=MAY-2024&size=3500 sqft&agent=Agent Jeet: 6355664142" class="btn btn-secondary">View Details</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Third Card -->
+         <!-- Fourth Card -->
+         <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-4.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹30,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Ayush Flates</h3>
+                        <p>Vatva west, Ahmedabad, <br>India - 380058</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=AYUSH FLATES&marketedBy=GANESH ASSOCIATES&address=Vatva west, Ahmedabad, India - 380058&rentSale=FOR RENT&price=₹30,000/mo&bhk=3BHK FLAT&month=MARCH-2024&size=3500 sqft&agent=Agent YASH: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Fourth Card -->
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- First Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-5.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>3 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹65 Lac Onwards</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Gokuldham Society</h3>
+                        <p>Maninagar, Ahmedabad, india - 380008</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Gokuldham Society&marketedBy=ORCHID BUILDERS&address=Maninagar, Ahmedabad, India - 380008&rentSale=FOR SELL&price=₹65 Lac Onwards&bhk=3BHK FLAT&month=MARCH-2024&size=3500 sqft&agent=Agent DEEP: 6355664142" class="btn btn-secondary">View Details</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of First Card -->
+        <!-- Second Card -->
+        <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-6.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Rent</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹40,000/mo</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Yash Flates</h3>
+                        <p>Kankaria, Ahmedabad, India - 380008</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 4 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 3 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Yash Flates&marketedBy=SHIVALIK ASSOCIATES&address=Kankaria, Ahmedabad, India - 380008&rentSale=FOR RENT&price=₹40,000/mo&bhk=4BHK FLAT&month=MARCH-2024&size=3500 sqft&agent=Agent YASH: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Second Card -->
+         <!-- Third Card -->
+         <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-7.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>6 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹80 Lac Onwards</h3><br><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Avista Heights</h3>
+                        <p>Jodhpur, Ahmedabad, India - 380004</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Avista Heights&marketedBy=SHIVALIK ASSOCIATES&address=Jodhpur, Ahmedabad, India - 380004&rentSale=FOR SALE&price=₹80 LAC ONWARDS&bhk=3BHK FLAT&month=MARCH-2024&size=2500 sqft&agent=Agent YASH: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Third Card -->
+         <!-- Fourth Card -->
+         <div class="col">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/img-8.jpg" class="card-img-top" alt="">
+                    <div class="info">
+                        <h3>5 days ago</h3>
+                        <h3>For Sell</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-price"> 
+                        <h3> ₹35,000/mo</h3><br>
+                        <div class="icon-container">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-envelope"></a>
+                            <a href="#" class="fas fa-phone"></a>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <h3>Malabar Retreat</h3>
+                        <p>Bopal, Ahmedabad, India - 380058</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="card-details">
+                            <h3><i class="fas fa-expand"></i> 3500 sqft</h3>
+                            <h3><i class="fas fa-bed"></i> 3 beds</h3>
+                            <h3><i class="fas fa-bath"></i> 2 baths</h3>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="#" class="btn btn-primary">Request Info</a>
+                        <a href="/subpage.html?cardTitle=Malabar Retreat&marketedBy=DHANANJAY ASSOCIATES&address=Bopal, Ahmedabad, India - 380058&rentSale=FOR RENT&price=₹35,000/mo&bhk=3BHK FLAT&month=MARCH-2024&size=3500 sqft&agent=Agent Smit: 6355664142" class="btn btn-secondary">View Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Fourth Card -->
+    </div>
+</div>
+
+
+
+
+
+<section class="why-choose-us-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="choose-destination">Why you should choose us</p>
+                <h2 class="section-title">OUR SERVICES</h2>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-md-4 py-3 py-md-0">
+                <div class="card card-service">
+                    <img src="/images/s-1.png" alt="Service 1">
+                    <div class="card-body">
+                        <h3 class="card-title">Buying Home</h3>
+                        <p class="card-text">
+                            Discover your dream home with our expert real estate agents.
+                            Get pre-approved for a mortgage and start your home search today.
+                            Benefit from our market expertise and negotiating power.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+                <div class="card card-service">
+                    <img src="/images/s-2.png" alt="Service 2">
+                    <div class="card-body">
+                        <h3 class="card-title">Renting Home</h3>
+                        <p class="card-text">
+                            Find your perfect rental property with our extensive database of available rentals.
+                            Get personalized assistance from our team of rental experts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-3 py-md-0">
+                <div class="card card-service">
+                    <img src="/images/s-3.png" alt="Service 3">
+                    <div class="card-body">
+                        <h3 class="card-title">Selling Home</h3>
+                        <p class="card-text">
+                            Sell your home quickly and efficiently with our expert real estate agents.
+                            Get a competitive market analysis and pricing strategy.
+                            Benefit from our extensive network of buyers and investors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  
+
+
+<footer class="footer-section">
+    <div class="container">
+        <!-- Social Media Links -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-4 text-center">
+                <img src="/images/favicon.jpeg" alt=""><br>
+                <p>The importance of trust and safety in the relationship between housing.com and its clients. It communicates the company's dedication to transparency, quality service, and ensuring the safety of its clients throughout their journey of finding a home.  </p>
+                <br>
+                <h5>Connect with us</h5>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Company Information, Useful Links, and Contact -->
+        <div class="row text-center">
+            <!-- Company Information -->
+            <div class="col-md-4 mb-4">
+                <h5>About Us</h5>
+                <p>At housing.com, we're committed to simplifying the journey of finding your dream home. With our innovative platform, we empower individuals and families to discover, rent, buy, and sell properties with ease. <br>Join us on the journey to your perfect home today. </p>
+            </div>
+            <!-- Useful Links -->
+            <div class="col-md-4 mb-4 useful-links">
+                <h5>Useful Links</h5>
+                <p><a href="/index.html" class="text-reset">Home</a></p>
+                <p><a href="#" class="text-reset" onclick="f1(this)">Buy</a></p>
+                <p><a href="#" class="text-reset" onclick="f2(this)">Rent</a></p>
+                <p><a href="#" class="text-reset" onclick="f3(this)">Sell</a></p>
+                <p><a href="/signup.html" class="text-reset">Login</a></p>
+            </div>
+            <!-- Contact Information -->
+            <div class="col-md-4 mb-4">
+                <h5>Contact</h5>
+                <p><i class="fas fa-map-marker-alt"></i> 426 Vrindavan Complex, Vasna Rd,Ahmedabad,380008</p>
+                <p><i class="fas fa-envelope"></i> help@housing.com</p>
+                <p><i class="fas fa-phone"></i> +91 6355664142</p>
+            </div>
+        </div>
+        <!-- Bottom Footer -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>&copy; 2024 Housing.com <br>All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/script.js"></script>
+
+</body>
+</html>

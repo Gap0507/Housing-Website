@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.jpeg" type="image/x-icon">
+    <title>Housing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+        /* Navbar */
+        .navbar {
+            background-color: #333;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .navbar-brand img {
+            width: 164px;
+            height: 21px;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 11px 22px;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ff9f00!important;
+        }
+
+        .btn-contact {
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            padding: 9px 18px;
+            margin-left: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-contact:hover {
+            background-color: #ff9f00;
+            color: #000000;
+        }
+
+        .container-input {
+            position: relative;
+            margin-right: 120px;
+        }
+
+        .input {
+            width: 250px;
+            padding: 10px 0px 10px 40px;
+            border-radius: 100px;
+            border: solid 1px #333;
+            transition: all 0.2s ease-in-out;
+            outline: none;
+            opacity: 0.8;
+        }
+
+        .container-input svg {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            margin-top: -10px; 
+        }
+
+
+        .input:focus {
+            opacity: 1;
+            width: 350px;
+        }
+        /* Footer Section */
+.footer-section {
+    background-color: black;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer-section img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: black;
+    border: 2px solid black;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+.social-links a:hover {
+    background-color: #ff6600;
+    border-color: #ff6600;
+    color: black;
+}
+.useful-links a {
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease;
+}
+
+.useful-links a:hover {
+    font-weight: bold;
+}
+
+.footer-section h5 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Bottom Footer */
+.footer-section .row:last-child {
+    margin-top: 30px;
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-xl navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/images/logo.webp" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="container-input">
+                            <input type="text" placeholder="Search property" name="text" class="input">
+                            <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="f2(this)">Buy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="f1(this)">Rent</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="f3(this)">Sell</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/signup.html" class="btn btn-contact">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <br><br>
+    <div class="bg-light dark:bg-dark">
+        <div class="container py-5 ">
+            <div id="subpage-content"></div>
+            <div class="card shadow">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3 class="card-title fs-5 text-dark" id="project-head">Rameshwar Crystal</h3>
+
+                    <div class="btn-group">
+                        <button class="btn btn-outline-purple">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25a.75.75 0 00-.75-.75h-9a.75.75 0 00-.75.75v13.5c0 .414.336.75.75.75h9a.75.75 0 00.75-.75V15m0-6h2.19l.325-.325a.75.75 0 000-1.06l-4.44-4.44a.75.75 0 00-1.06 0l-.325.325V9m0 0H12m3.75 0h-1.5"/>
+                            </svg>
+                        </button>
+                        <button class="btn btn-outline-purple">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <dl class="row">
+                        <div class="px-4 py-4 row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 ms-1">
+                            <div class="col">
+                                <dt class="fs-6 text-secondary">Marketed by</dt>
+                                <dd class="fs-6 text-dark" id="project-group">RAMESHWAR GROUP</dd>
+                            </div>
+                            <div class="col">
+                                <dt class="fs-6 text-secondary">Location</dt>
+                                <dd class="fs-6 text-dark" id="project-address">Kashindra Police Chowky, Kasindra, Daskroi, Ahmedabad</dd>
+                            </div>
+                            <div class="col">
+                                <dt class="fs-6 text-secondary" id="project-type">Rent</dt>
+                                <dd class="fs-6 text-dark" id="project-price">₹86.0 L</dd>
+                            </div>
+                        </div>
+                        <div class="bg-light dark:bg-secondary px-4 py-5 ms-1 me-1">
+                            <div class="row row-cols-1 row-cols-md-2 g-4">
+                                <div class="col">
+                                    <!-- Carousel Slideshow -->
+                                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <!-- Image Slides -->
+                                            <div class="carousel-item active">
+                                                <img src="/images/img-1.jpg" class="d-block w-100" alt="First slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="/images/img-2.jpg" class="d-block w-100" alt="Second slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="/images/img-3.jpg" class="d-block w-100" alt="Third slide">
+                                            </div>
+                                        </div>
+                                        <!-- Carousel Controls -->
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <h4 class="fs-5 text-dark" id="project-bhk">3 BHK Apartment</h4>
+                                        <span class="fs-6 text-secondary" id="project-month">Jun, 2024</span>
+                                    </div>
+                                    <div class="mt-4">
+                                        <h5 class="fs-5 text-dark">Square Ft</h5>
+                                        <p class="fs-6 text-secondary" id="project-size">3500 sqft</p>
+                                    </div>
+                                    <div class="mt-4">
+                                        <h5 class="fs-5 text-dark">Contact Details</h5>
+                                        <p class="fs-6 text-secondary" id="project-agent">Agent Rishi: 9898565642</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-section">
+        <div class="container">
+            <!-- Social Media Links -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-4 text-center">
+                    <img src="/images/favicon.jpeg" alt=""><br>
+                    <p>The importance of trust and safety in the relationship between housing.com and its clients. It communicates the company's dedication to transparency, quality service, and ensuring the safety of its clients throughout their journey of finding a home.  </p>
+                    <br>
+                    <h5>Connect with us</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Company Information, Useful Links, and Contact -->
+            <div class="row text-center">
+                <!-- Company Information -->
+                <div class="col-md-4 mb-4">
+                    <h5>About Us</h5>
+                    <p>At housing.com, we're committed to simplifying the journey of finding your dream home. With our innovative platform, we empower individuals and families to discover, rent, buy, and sell properties with ease. <br>Join us on the journey to your perfect home today. </p>
+                </div>
+                <!-- Useful Links -->
+                <div class="col-md-4 mb-4 useful-links">
+                    <h5>Useful Links</h5>
+                    <p><a href="/index.html" class="text-reset">Home</a></p>
+                    <p><a href="#" class="text-reset" onclick="f1(this)">Buy</a></p>
+                    <p><a href="#" class="text-reset" onclick="f2(this)">Rent</a></p>
+                    <p><a href="#" class="text-reset" onclick="f3(this)">Sell</a></p>
+                    <p><a href="/signup.html" class="text-reset">Login</a></p>
+                </div>
+                <!-- Contact Information -->
+                <div class="col-md-4 mb-4">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 426 Vrindavan Complex, Vasna Rd,Ahmedabad,380008</p>
+                    <p><i class="fas fa-envelope"></i> help@housing.com</p>
+                    <p><i class="fas fa-phone"></i> +91 6355664142</p>
+                </div>
+            </div>
+            <!-- Bottom Footer -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2024 Housing.com <br>All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
